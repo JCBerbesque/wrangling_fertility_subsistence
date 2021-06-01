@@ -21,10 +21,6 @@ repro_hist <- read_excel("/Users/jcberbesque/Desktop/Data Science/demographic_in
 library(tidyr)
 repro_hist <- repro_hist %>% gather(Childid, kidID, Idk_1, Idk_2, Idk_3, Idk_4, Idk_5, Idk_6, Idk_7, Idk_8, Idk_9, Idk_10, Idk_11, na.rm = FALSE, convert = FALSE)
 head(repro_hist, 24) 
-          
-#now remember there is no way to tell missing repro history from people without kids...fuck
-#move on to flag up repeat entries (to find most complete repo history per person)
-
 
 #rearrange by adult ID
 order(repro_hist$ID,na.last = TRUE)
